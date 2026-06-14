@@ -31,10 +31,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     annotationProcessor("androidx.room:room-compiler:2.6.1")
     implementation("com.google.android.gms:play-services-maps:20.0.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")

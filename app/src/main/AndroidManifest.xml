@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GPS_Project">
         <activity
-            android:name=".ui.auth.LoginActivity"
+            android:name=".ui.admin.RegistroAccesosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.GestionUsuariosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.GestionPuntosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ItemPunto"
+            android:exported="false"
+            android:theme="@style/Theme.GPS_Project" />
+        <activity
+            android:name=".ui.admin.DashboardAdminActivity"
             android:exported="false" />
 
         <meta-data
@@ -20,7 +36,7 @@
             android:value="AIzaSyDOcStNwJCquyJipOjRBfQySAnplvrwUYo" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +44,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.empleado.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.DashboardAdminActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
