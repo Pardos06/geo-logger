@@ -15,7 +15,7 @@ public class Usuario {
     @ColumnInfo(name = "password")
     public String password;
 
-    @ColumnInfo(name = "rol") // "administrador" o "empleado"
+    @ColumnInfo(name = "rol")
     public String rol;
 
     // Constructor

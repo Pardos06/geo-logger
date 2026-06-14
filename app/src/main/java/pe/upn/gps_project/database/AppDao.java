@@ -28,6 +28,9 @@ public interface AppDao {
     @Delete
     void eliminarUsuario(Usuario usuario);
 
+    @Query("SELECT COUNT(*) FROM ubicaciones WHERE usuario_id = :userId")
+    int contarUbicacionesPorUsuario(int userId);
+
     // --- CONSULTAS DE UBICACIONES ---
     @Insert
     void insertarUbicacion(Ubicacion ubicacion);
