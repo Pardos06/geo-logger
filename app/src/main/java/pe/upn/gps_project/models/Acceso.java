@@ -8,15 +8,15 @@ import androidx.room.PrimaryKey;
 public class Acceso {
     @PrimaryKey(autoGenerate = true)
     public int id;
-
     @ColumnInfo(name = "usuario_id")
     public int usuarioId;
-
     @ColumnInfo(name = "fecha_hora_consulta")
-    public String fechaHoraConsulta; // Registra cuándo Paula (u otros) entran al sistema
-
-    public Acceso(int usuarioId, String fechaHoraConsulta) {
+    public String fechaHoraConsulta;
+    @ColumnInfo(name = "accion")
+    public String accion;
+    public Acceso(int usuarioId, String fechaHoraConsulta, String accion) {
         this.usuarioId = usuarioId;
         this.fechaHoraConsulta = fechaHoraConsulta;
+        this.accion = accion;
     }
 }
